@@ -9,14 +9,18 @@
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
     <div class="h-screen w-full flex flex-col justify-center items-center gap-4">
-        <h1 class="text-5xl text-amber-500">Welcome To Mofu Meet</h1>
-        <p class="text-xl">Join events, meet friends, start your journey.</p>
+        <h1 class="text-5xl animate__animated animate__fadeInUp animate__slow">Welcome to MofuMeet</h1>
+        <p class="text-xl animate__animated animate__fadeInUp animate__delay-1s">Join events, meet friends, start your
+            journey.</p>
+        <br>
         <a href="/login"
-            class="bg-[#7289DA] rounded-sm px-6 py-2 text-white hover:cursor-pointer font-bold flex items-center gap-2">
+            class="bg-[#7289DA] rounded-sm px-6 py-1.5 text-white hover:cursor-pointer font-bold flex items-center gap-2 animate__animated animate__bounce animate__delay-2s">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                 class="bi bi-discord" viewBox="0 0 16 16">
                 <path
@@ -25,12 +29,6 @@
             Login with Discord
         </a>
     </div>
-
-    @if (session('error'))
-        <script>
-            alert(@json(session('error')));
-        </script>
-    @endif
 </body>
 
 </html>
