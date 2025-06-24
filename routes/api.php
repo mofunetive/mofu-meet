@@ -9,5 +9,5 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get('/user/{id}', function (string $id) {
-    return 'User '.$id;
+    return 'User ' . $id;
 });
