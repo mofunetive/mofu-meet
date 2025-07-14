@@ -40,9 +40,9 @@
         </div>
 
         @auth
-            <div class="relative flex gap-4 justify-center items-center">
+            <div class="relative flex gap-4 ">
                 <button onclick="toggleLogout()"
-                    class="flex items-center gap-2 hover:bg-gray-100 cursor-pointer rounded-sm px-2 py-1 transition-colors duration-300">
+                    class="w-full flex justify-end items-center gap-2 hover:bg-gray-100 cursor-pointer rounded-sm px-2 py-1 transition-colors duration-300">
                     <h1 class="font-semibold">Hello World, {{ Auth::user()->name }}.</h1>
                     <img src="https://cdn.discordapp.com/avatars/{{ Auth::user()->discord_id }}/{{ Auth::user()->avatar }}.png"
                         alt="avatar" class="h-8 w-8 rounded-full">
